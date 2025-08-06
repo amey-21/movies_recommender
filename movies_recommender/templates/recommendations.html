@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommendations for {{ movie }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Recommended Movies for "{{ movie }}"</h2>
+    <div class="container">
+        {% for i in range(names|length) %}
+            <div class="movie-card">
+                <a href="{{ urls[i] }}" target="_blank">
+                    <img src="{{ posters[i] }}" alt="{{ names[i] }}">
+                    <p>{{ names[i] }}</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+    <div style="text-align: center; margin-top: 40px;">
+        <a href="/"><button>← Back to Home</button></a>
+    </div>
+</body>
+</html>
