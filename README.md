@@ -1,0 +1,1 @@
+A web-based Movie Recommender System built with Python, Flask, Scikit-Learn, and TMDB API. It uses content-based filtering and cosine similarity on movie metadata to recommend similar titles. The app features an intuitive Flask UI with real-time recommendations, high-resolution movie posters, and direct TMDB links.
