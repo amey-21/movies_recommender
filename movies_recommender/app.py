@@ -38,6 +38,8 @@ def index():
         return render_template('recommendations.html', movie=selected_movie, names=names, posters=posters, urls=urls)
     return render_template('index.html', movie_list=movie_titles)
 
-if __name__ == '__main__':
-    app.run(port = 8000, debug=True)
-
+# if __name__ == '__main__':
+    # app.run(port = 8000, debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # fallback for local
+    app.run(host="0.0.0.0", port=port)
